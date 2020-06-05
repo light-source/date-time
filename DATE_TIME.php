@@ -37,7 +37,7 @@ abstract class DATE_TIME {
 	/**
 	 * @return DateTime|null
 	 */
-	final public static function DateTimeNow() {
+	final public static function Now() {
 
 		$dateTimeNow = null;
 
@@ -56,7 +56,7 @@ abstract class DATE_TIME {
 	 *
 	 * @return DateInterval|null
 	 */
-	final public static function DateInterval( $intervalInfo, $isInvert ) {
+	final public static function Interval( $intervalInfo, $isInvert ) {
 
 		$dateInterval = null;
 
@@ -80,14 +80,14 @@ abstract class DATE_TIME {
 	 *
 	 * @return string
 	 */
-	final public static function DateTimeToString( $dateTime = null, $format = null ) {
+	final public static function ToString( $dateTime = null, $format = null ) {
 
 		$format = ! is_null( $format ) ?
 			$format :
 			self::$Format;
 
 		$dateTime = is_null( $dateTime ) ?
-			self::DateTimeNow() :
+			self::Now() :
 			clone $dateTime;
 
 		return ! is_null( $dateTime ) ?
@@ -102,10 +102,10 @@ abstract class DATE_TIME {
 	 *
 	 * @return int
 	 */
-	final public static function DateTimeToTimestamp( $dateTime = null ) {
+	final public static function ToTimestamp( $dateTime = null ) {
 
 		$dateTime = is_null( $dateTime ) ?
-			self::DateTimeNow() :
+			self::Now() :
 			clone $dateTime;
 
 		return ( ! is_null( $dateTime ) ?
@@ -122,7 +122,7 @@ abstract class DATE_TIME {
 	 *
 	 * @return DateTime|null New DateTime (clone)
 	 */
-	final public static function DateTimeAddPeriod( $periodType, $value, $dateTime = null ) {
+	final public static function AddPeriod( $periodType, $value, $dateTime = null ) {
 
 		// used clone, because add is modify DateTime
 
@@ -151,9 +151,9 @@ abstract class DATE_TIME {
 
 		// used clone because ->add modify object
 
-		$newDateTime = is_null( $dateTime ) ? self::DateTimeNow() : clone $dateTime;
+		$newDateTime = is_null( $dateTime ) ? self::Now() : clone $dateTime;
 
-		$dateInterval = self::DateInterval( $intervalInfo, $isInvert );
+		$dateInterval = self::Interval( $intervalInfo, $isInvert );
 
 		return ( ( ! is_null( $newDateTime ) && ! is_null( $dateInterval ) ) ? $newDateTime->add( $dateInterval ) : null );
 	}
@@ -163,8 +163,8 @@ abstract class DATE_TIME {
 	 *
 	 * @return bool
 	 */
-	final public static function DateTimeIsFuture( $dateTime ) {
-		return $dateTime > self::DateTimeNow();
+	final public static function IsFuture( $dateTime ) {
+		return $dateTime > self::Now();
 	}
 
 	/**
@@ -175,7 +175,7 @@ abstract class DATE_TIME {
 	 *
 	 * @return DateTime|null
 	 */
-	final public static function DateTimeFromString( $string, $format = null ) {
+	final public static function FromString( $string, $format = null ) {
 
 		$format = ! is_null( $format ) ?
 			$format :
@@ -201,9 +201,9 @@ abstract class DATE_TIME {
 	 *
 	 * @return int
 	 */
-	final public static function DateTimeDifference( $periodType, $dateTimeMax, $dateTimeMin = null ) {
+	final public static function Difference( $periodType, $dateTimeMax, $dateTimeMin = null ) {
 
-		$dateTimeMin = is_null( $dateTimeMin ) ? self::DateTimeNow() : clone $dateTimeMin;
+		$dateTimeMin = is_null( $dateTimeMin ) ? self::Now() : clone $dateTimeMin;
 
 		$differenceInSeconds = ! is_null( $dateTimeMin ) ?
 			( $dateTimeMax->getTimestamp() - $dateTimeMin->getTimestamp() ) : 0;
