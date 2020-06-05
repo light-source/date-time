@@ -1,0 +1,13 @@
+{
+  "name": "lightsource/date-time",
+  "type": "library",
+  "description": "Helper for std DateTime",
+  "license": "MIT",
+  "require": {
+  },
+  "autoload": {
+    "psr-4": {
+      "LightSource\\DateTime\\": ""
+    }
+  }
+}
