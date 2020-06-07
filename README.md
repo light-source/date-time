@@ -3,7 +3,7 @@
 ## What is it
 Helper for working with a standard DateTime class, provide functions like adding DateInterval, etc..
 
-## Instalation
+## Installation
 ```
 composer require lightsource/date-time
 ```
