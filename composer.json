@@ -1,7 +1,7 @@
 {
   "name": "lightsource/date-time",
   "type": "library",
-  "description": "Helper for std DateTime",
+  "description": "Helper for working with a standard DateTime class, provide functions like adding DateInterval, etc..",
   "license": "MIT",
   "require": {
   },
