@@ -1,4 +1,9 @@
 # Date Time
+[![Latest Stable Version](https://poser.pugx.org/lightsource/date-time/v)](//packagist.org/packages/lightsource/date-time)
+[![Total Downloads](https://poser.pugx.org/lightsource/date-time/downloads)](//packagist.org/packages/lightsource/date-time)
+[![Monthly Downloads](https://poser.pugx.org/lightsource/date-time/d/monthly)](//packagist.org/packages/lightsource/date-time)
+[![Daily Downloads](https://poser.pugx.org/lightsource/date-time/d/daily)](//packagist.org/packages/lightsource/date-time)
+[![License](https://poser.pugx.org/lightsource/date-time/license)](//packagist.org/packages/lightsource/date-time)
 
 ## What is it
 Helper for working with a standard DateTime class, provide functions like adding DateInterval, etc..
