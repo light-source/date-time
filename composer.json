@@ -2,7 +2,7 @@
   "name": "lightsource/date-time",
   "type": "library",
   "description": "Helper for working with a standard DateTime class, provide functions like adding DateInterval, etc..",
-  "license": "MIT",
+  "license": "GPL-2.0-only",
   "require": {
   },
   "autoload": {
